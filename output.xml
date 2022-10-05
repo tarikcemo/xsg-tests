@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221005 21:15:18.468" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="C:\XSG\tests\login.robot">
+<test id="s1-t1" name="Verify Successful Login to OrangeHRM" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 21:15:18.718" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20221005 21:15:18.718" endtime="20221005 21:15:21.434"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input[placeholder="Username"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221005 21:15:21.435" endtime="20221005 21:15:21.776"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[placeholder="Username"]</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 21:15:21.777" level="INFO">Typing text 'Admin' into text field 'css:input[placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20221005 21:15:21.776" endtime="20221005 21:15:21.871"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>css:input[placeholder="Password"]</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221005 21:15:21.872" level="INFO">Typing password into text field 'css:input[placeholder="Password"]'.</msg>
+<msg timestamp="20221005 21:15:21.920" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221005 21:15:21.992" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221005 21:15:21.872" endtime="20221005 21:15:21.992"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221005 21:15:21.993" level="INFO">Clicking element 'xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20221005 21:15:21.992" endtime="20221005 21:15:22.058"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221005 21:15:22.059" endtime="20221005 21:15:24.186"/>
+</kw>
+<doc>This test case verifies that user is able to successfully Login to OrangeHRM</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221005 21:15:18.717" endtime="20221005 21:15:24.187"/>
+</test>
+<test id="s1-t2" name="Create New User" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221005 21:15:24.189" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20221005 21:15:24.189" endtime="20221005 21:15:46.206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:input[placeholder="Username"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20221005 21:15:46.210" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.91)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B21ED3+2236115]
+	Ordinal0 [0x00AB92F1+1807089]
+	Ordinal0 [0x009C66FD+812797]
+	Ordinal0 [0x009ADFFA+712698]
+	Ordinal0 [0x00A1506B+1134699]
+	Ordinal0 [0x00A2514A+1200458]
+	Ordinal0 [0x00A118A6+1120422]
+	Ordinal0 [0x009EA73D+960317]
+	Ordinal0 [0x009EB71F+964383]
+	GetHandleVerifier [0x00DCE7E2+2743074]
+	GetHandleVerifier [0x00DC08D4+2685972]
+	GetHandleVerifier [0x00BB2BAA+532202]
+	GetHandleVerifier [0x00BB1990+527568]
+	Ordinal0 [0x00AC080C+1837068]
+	Ordinal0 [0x00AC4CD8+1854680]
+	Ordinal0 [0x00AC4DC5+1854917]
+	Ordinal0 [0x00ACED64+1895780]
+	BaseThreadInitThunk [0x75D76739+25]
+	RtlGetFullPathName_UEx [0x77228E7F+1215]
+	RtlGetFullPathName_UEx [0x77228E4D+1165]
+</msg>
+<msg timestamp="20221005 21:15:46.212" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.91)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B21ED3+2236115]
+	Ordinal0 [0x00AB92F1+1807089]
+	Ordinal0 [0x009C66FD+812797]
+	Ordinal0 [0x009ADFFA+712698]
+	Ordinal0 [0x00A1506B+1134699]
+	Ordinal0 [0x00A2514A+1200458]
+	Ordinal0 [0x00A118A6+1120422]
+	Ordinal0 [0x009EA73D+960317]
+	Ordinal0 [0x009EB71F+964383]
+	GetHandleVerifier [0x00DCE7E2+2743074]
+	GetHandleVerifier [0x00DC08D4+2685972]
+	GetHandleVerifier [0x00BB2BAA+532202]
+	GetHandleVerifier [0x00BB1990+527568]
+	Ordinal0 [0x00AC080C+1837068]
+	Ordinal0 [0x00AC4CD8+1854680]
+	Ordinal0 [0x00AC4DC5+1854917]
+	Ordinal0 [0x00ACED64+1895780]
+	BaseThreadInitThunk [0x75D76739+25]
+	RtlGetFullPathName_UEx [0x77228E7F+1215]
+	RtlGetFullPathName_UEx [0x77228E4D+1165]
+</msg>
+<status status="FAIL" starttime="20221005 21:15:46.206" endtime="20221005 21:15:46.273"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[placeholder="Username"]</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221005 21:15:46.274" endtime="20221005 21:15:46.274"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>css:input[placeholder="Password"]</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221005 21:15:46.274" endtime="20221005 21:15:46.275"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221005 21:15:46.275" endtime="20221005 21:15:46.275"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221005 21:15:46.275" endtime="20221005 21:15:46.275"/>
+</kw>
+<doc>This test case verifies that user is created</doc>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20221005 21:15:24.188" endtime="20221005 21:15:46.276">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.91)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B21ED3+2236115]
+	Ordinal0 [0x00AB92F1+1807089]
+	Ordinal0 [0x009C66FD+812797]
+	Ordinal0 [0x009ADFFA+712698]
+	Ordinal0 [0x00A1506B+1134699]
+	Ordinal0 [0x00A2514A+1200458]
+	Ordinal0 [0x00A118A6+1120422]
+	Ordinal0 [0x009EA73D+960317]
+	Ordinal0 [0x009EB71F+964383]
+	GetHandleVerifier [0x00DCE7E2+2743074]
+	GetHandleVerifier [0x00DC08D4+2685972]
+	GetHandleVerifier [0x00BB2BAA+532202]
+	GetHandleVerifier [0x00BB1990+527568]
+	Ordinal0 [0x00AC080C+1837068]
+	Ordinal0 [0x00AC4CD8+1854680]
+	Ordinal0 [0x00AC4DC5+1854917]
+	Ordinal0 [0x00ACED64+1895780]
+	BaseThreadInitThunk [0x75D76739+25]
+	RtlGetFullPathName_UEx [0x77228E7F+1215]
+	RtlGetFullPathName_UEx [0x77228E4D+1165]
+</status>
+</test>
+<doc>Login Functionality</doc>
+<status status="FAIL" starttime="20221005 21:15:18.470" endtime="20221005 21:15:46.277"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221005 21:15:46.210" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=106.0.5249.91)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B21ED3+2236115]
+	Ordinal0 [0x00AB92F1+1807089]
+	Ordinal0 [0x009C66FD+812797]
+	Ordinal0 [0x009ADFFA+712698]
+	Ordinal0 [0x00A1506B+1134699]
+	Ordinal0 [0x00A2514A+1200458]
+	Ordinal0 [0x00A118A6+1120422]
+	Ordinal0 [0x009EA73D+960317]
+	Ordinal0 [0x009EB71F+964383]
+	GetHandleVerifier [0x00DCE7E2+2743074]
+	GetHandleVerifier [0x00DC08D4+2685972]
+	GetHandleVerifier [0x00BB2BAA+532202]
+	GetHandleVerifier [0x00BB1990+527568]
+	Ordinal0 [0x00AC080C+1837068]
+	Ordinal0 [0x00AC4CD8+1854680]
+	Ordinal0 [0x00AC4DC5+1854917]
+	Ordinal0 [0x00ACED64+1895780]
+	BaseThreadInitThunk [0x75D76739+25]
+	RtlGetFullPathName_UEx [0x77228E7F+1215]
+	RtlGetFullPathName_UEx [0x77228E4D+1165]
+</msg>
+</errors>
+</robot>
